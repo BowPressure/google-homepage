@@ -1,106 +1,128 @@
-<!DOCTYPE html>
-<htmlL>
+<html>
     <head>
-        <style>
-            #main-tools {
-                text-align: center;
-                margin-top: 50px;
-            }
+    <style>
 
-            body {
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-            }
+        html, body {
+            height: 100%;
+            margin: 0px;
+        }
 
-            .header-flex {
-                display: flex;
-                flex-direction: row;
-                column-gap: 15px;
-                margin-top: 15px;
-                margin-left: 16px;
-                margin-right: 16px;
-                align-items: center;
-            }
+        #main-tools {
+            align-items: center;
+            margin-top: 110px;
+            display: flex;
+            flex-direction: column;
+            row-gap:25px;
+            align-items: center;
+        }
 
-            .header-text {
-                font-size: 13px;
-                font-family:Arial, Helvetica, sans-serif;
-                color: #414141;
-                justify-self: center;
-            }
+        .header-flex {
+            display: flex;
+            flex-direction: row;
+            column-gap: 15px;
+            margin-top: 15px;
+            margin-right: 30px;
+            margin-left: 25px;
+            align-items: center;
+        }
 
-            .body-flex {
-                display: flex;
-                flex-direction: column;
-                row-gap:20px;
-                align-items: center;
-            }
+        .header-text {
+            font-size: 13px;
+            font-family:Arial, Helvetica, sans-serif;
+            color: #414141;
+        }
 
-            .button-flex {
-                display: flex;
-                flex-direction: row;
-                column-gap: 12px;
-                margin-top: 10px;
-            }
+        .body-flex {
+            display: flex;
+            flex-direction: column;
+            flex: 74%;
+        }   
 
-            .footer-flex {
-                display: flex;
-                flex-direction: row;
-                flex-shrink: 0;
-                bottom: 0px;
-                align-self: flex-end;
-                column-gap: 15px;
-                margin-left: 20px;
-                margin-bottom: 20px;
-                margin-right: 20px;
-            }
+        .top-box {
+            flex-grow: 1;
+            justify-content: flex-start;
+        }
 
-            .test-border {
-                border: solid;
-                border-color: red;
-            }
+        .middle-box {
+            flex-grow: 3;
+            align-items: center;
+            justify-content: center;
+        }
 
-            .search-button {
-                border: 1px solid#f8f9fa;
-                border-radius: 2px;
-                background-color: #f8f9fa;
-                height: 34px;
-                width: 130px;
-                font-size: 14px;
-                font-family: Arial, Helvetica, sans-serif;
-                color: #414141;
-            }
+        .bottom-box {
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
 
-            .search-bar {
-                border: 1px solid lightgray;
-                border-radius: 25px;
-                height: 40px;
-                width: 555px;
-            }
+        .footer-flex {
+            display: flex;
+            flex-direction: row;
+            column-gap: 27px;
+            padding-top: 12px;
+            padding-right: 30px;
+            padding-bottom: 12px;
+            padding-left: 30px;
+            background-color: #f2f2f2;
+            border-top: 1px solid #dadce0;
+            flex-wrap: wrap;
+        }
 
-            .button-sign-in {
-                border: 1px solid #4386f9;
-                border-radius: 2px;
-                color: white;
-                background-color: #4386f9;
-                height: 30px;
-                width: 68px;
-                font-weight:bold;
-                font-size: 12px;
-                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-        </style>
+        .footer-text {
+            font-size: 14px;
+            font-family:Arial, Helvetica, sans-serif;
+            color: #616161;
+        }
+
+        .button-sign-in {
+            border: 1px solid #4386f9;
+            border-radius: 2px;
+            color: white;
+            background-color: #4386f9;
+            height: 30px;
+            width: 68px;
+            font-weight:bold;
+            font-size: 12px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .button-flex {
+            display: flex;
+            flex-direction: row;
+            column-gap: 12px;
+            margin-top: 10px;
+        }
+
+        .search-button {
+            border: 1px solid#f2f2f2;
+            border-radius: 2px;
+            background-color: #f2f2f2;
+            height: 34px;
+            width: 130px;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #616161;
+        }
+
+        .search-bar {
+            border: 1px solid #d8d9da;
+            border-radius: 25px;
+            height: 45px;
+            width: 575px;
+            padding-left: 20px;
+        }
+
+    </style>
     </head>
-    <body class="test-border">
-        <header class="header-flex header-text">
+
+    <body class="body-flex">
+        <div class="header-flex header-text">
             <div>About</div>
             <div style="flex-grow: 1">Store</div>
             <div>Gmail</div>
             <div>Images</div>
             <div>Apps</div>
             <div><button class="button-sign-in">Sign in</button></div>
-        </header>
+        </div>
 
         <div id="main-tools" class="body-flex">
             <div><img src="googlelogo.png"></div>
@@ -108,15 +130,14 @@
             <div class="button-flex"><button class="search-button">Google Search</button><button class="search-button">I'm Feeling Lucky</button></div>
         </div>
 
-        <footer class="footer-flex test-border">
+        <footer class="footer-flex footer-text">
             <div>Advertising</div>
             <div>Business</div>
-            <div style="flex-grow: 1">How Search Works</div>
+            <div style="flex-grow: 1">How Search works</div>
             <div>Privacy</div>
             <div>Terms</div>
             <div>Settings</div>
         </footer>
 
     </body>
-
 </html>
